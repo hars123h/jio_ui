@@ -14,7 +14,8 @@ module.exports = {
         'recharge-bg':'#f2f2f2',
         'withdraw': '#f2f2f2',
         'selected':'#2a00a7',
-        'nselected':'#dbdbdb'
+        'nselected':'#dbdbdb',
+        'pre_sale':"#efefef"
       },
       animation: {
         marquee: 'marquee 8s linear infinite',
