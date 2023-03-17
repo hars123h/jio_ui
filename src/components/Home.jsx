@@ -313,7 +313,7 @@ const Home = () => {
                 >
                     <div className='w-full rounded-lg shadow-xl z-10 border border-gray-200'>
                         <div className='flex  flex-col bg-white w-full text-white rounded-md'>
-                            <div className='flex flex-col p-2 text-[16px] gap-2 font-normal bg-white text-red-600 text-semibold pt-4 mb-[10px]'>
+                            <div className='flex flex-col p-2 text-sm gap-2 font-normal bg-white text-red-600 text-semibold pt-4 mb-[5px]'>
                                 Withdrawal time: 09:00—20:00 <br />
                                 Register to send 100rs
 
