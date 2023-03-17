@@ -166,15 +166,37 @@ const Withdrawal = () => {
         setWamount(balance);
     }
 
+    const isBetween = () => {
+        var startTime = '8:00:00';
+        var endTime = '17:00:00';
+
+        var currentDate = new Date()
+
+        var startDate = new Date(currentDate.getTime());
+        startDate.setHours(startTime.split(":")[0]);
+        startDate.setMinutes(startTime.split(":")[1]);
+        startDate.setSeconds(startTime.split(":")[2]);
+
+        var endDate = new Date(currentDate.getTime());
+        endDate.setHours(endTime.split(":")[0]);
+        endDate.setMinutes(endTime.split(":")[1]);
+        endDate.setSeconds(endTime.split(":")[2]);
+
+
+        var valid = startDate < currentDate && endDate > currentDate;
+        //console.log(valid);
+        return valid;
+    }
+
     const handleLastButton = () => {
         openModal();
     }
     //[#2e9afe]
     return (
         <div className='bg-withdraw flex flex-col  sm:h-[1000px] md:h-[950px] relative'>
-            {toasterShow?<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 bg-black opacity-90 text-white px-2 py-1 rounded-md'>
-                    <div>{toasterText}</div>
+            {toasterShow?<div className='absolute top-1/2 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                <div className='flex gap-2 bg-black w-[80%] mx-auto  opacity-90 text-white px-2 py-1 rounded-md'>
+                    <div className='text-center'>{toasterText}</div>
                 </div>
             </div>:null}
             <div>
@@ -255,8 +277,12 @@ const Withdrawal = () => {
             </div>
             
             {/* [#2e9afe] */}
-           
-            <button onClick={handleLastButton} className='bg-red-800 rounded-md text-white text-lg mt-5 mx-auto  mb-20  shadow-md block w-[95%] py-2 shadow-slate-400'>Confirm</button>
+            {
+                isBetween() ?
+                <button onClick={handleLastButton} className='bg-red-800 rounded-md text-white text-lg mt-5 mx-auto  mb-20  shadow-md block w-[95%] py-2 shadow-slate-400'>Confirm</button>
+                :
+                <button onClick={()=>toaster('You can withdraw only between 08:00 AM to 05:00 PM')}  className='bg-red-800 rounded-md text-white text-lg mt-5 mx-auto  mb-20  shadow-md block w-[95%] py-2 shadow-slate-400'>Confirm</button>
+            }
             
         </div>
     )

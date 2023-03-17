@@ -19,6 +19,7 @@ import asset0 from '../images/assets5/asset 0.png';
 import asset1 from '../images/assets5/asset 1.png';
 import lenskart_logo from '../images/lenskart_logo.png';
 import jio from '../images/asml/jio.png';
+import jlogo from '../images/asml/jlogo.jpg';
 
 
 
@@ -102,7 +103,7 @@ const Login = () => {
                 <div className='text-sm'>{text}</div>
             </div> : null}
             <div className='text-center'>
-                <img src={jio} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-8 mb-14' width={220} />
+                <img src={jlogo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-8 mb-14' width={220} />
             </div>
             <div className='flex flex-col m-auto w-4/5'>
                 <div className=" items-center mb-3 p-2 phoneno flex  bg-[#f1f1f1] rounded-md ">

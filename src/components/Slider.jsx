@@ -18,6 +18,8 @@ import slide1 from '../images/asml/slide1.jpg';
 import slide2 from '../images/asml/slide2.jpg';
 import slide3 from '../images/asml/slide3.jpg';
 import slide4 from '../images/asml/slide4.jpg';
+import slide5 from '../images/asml/slide5.jpg';
+
 
 const Slider = () => {
   return (
@@ -32,12 +34,12 @@ const Slider = () => {
         </div>
 
         <div>
-          <img src={slide3} className="h-[160px]" alt="img_2" />
+          <img src={slide5} className="h-[160px]" alt="img_2" />
         </div>
 
-        <div>
+        {/* <div>
           <img src={slide4} className="h-[160px]" alt="img_2" />
-        </div>
+        </div> */}
 
         {/* <div>
           <img src={lenscart_slide2} className="h-[160px]" alt="img_2" />

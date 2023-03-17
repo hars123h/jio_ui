@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AmountContext } from '../App';
 
@@ -11,6 +11,7 @@ const Recharge = () => {
     const amountDetails = useContext(AmountContext);
     const [toasterShow, setToasterShow] = useState(false);
     const [toasterText, setToasterText] = useState('');
+    const valueRef = useRef();
 
     const toaster = (text) => {
         setToasterText(text);
@@ -70,18 +71,27 @@ const Recharge = () => {
                 <div className='m-1 text-sm text-gray-500 mb-4 '>Enter Amount:</div>
                 <div className='m-1 w-full flex items-center border-b border-gray-300 pb-2'>
                     <span className='text-red-700 font-bold p-0.5 text-[12px] pr-1 '>₹</span>
-                    <input onChange={(e) => setRecharge_Value(e.target.value)} type="text" name="amount" id="amt" placeholder='Amount' className='w-full bg-inherit text-red-800 outline-none font-normal text-lg ' />
+                    <input ref={valueRef} onChange={(e) => setRecharge_Value(e.target.value)} type="text"  name="amount" id="amt" placeholder='Amount' className='w-full bg-inherit text-red-800 outline-none font-normal text-lg ' />
+                </div>
+
+                <div className='grid grid-cols-3 gap-4 py-3'>
+                    <div className='bg-recharge-bg text-center py-2 rounded-md cursor-pointer' onClick={()=>{setRecharge_Value(500); valueRef.current.value=500;}}>500</div>
+                    <div className='bg-recharge-bg text-center py-2 rounded-md cursor-pointer' onClick={()=>{setRecharge_Value(1000); valueRef.current.value=1000;}}>1000</div>
+                    <div className='bg-recharge-bg text-center py-2 rounded-md cursor-pointer' onClick={()=>{setRecharge_Value(2000); valueRef.current.value=2000;}}>2000</div>
+                    <div className='bg-recharge-bg text-center py-2 rounded-md cursor-pointer' onClick={()=>{setRecharge_Value(3000); valueRef.current.value=3000;}}>3000</div>
+                    <div className='bg-recharge-bg text-center py-2 rounded-md cursor-pointer' onClick={()=>{setRecharge_Value(5000); valueRef.current.value=5000;}}>5000</div>
+                    <div className='bg-recharge-bg text-center py-2 rounded-md cursor-pointer' onClick={()=>{setRecharge_Value(20000); valueRef.current.value=20000;}}>20000</div>
                 </div>
 
                 <div className="cnf_recharge w-[85%] mx-auto mt-7">
                     <button onClick={handleRecharge} className='w-full bg-red-800 py-2 rounded-md text-white text-lg '>Confirm Recharge</button>
                 </div>
 
-                <ol className='text-red-600 text-[13px] flex flex-col gap-1 mt-2'>
-                    <li className='mt-2 my-1 mr-1'>1: Follow the recharge video operation to help you quickly recharge successfully.</li>
-                    <li className='mt-2 my-1 mr-1'>2: If the funds do not arrive in time, please contact the APP online customer service immediately.</li>
-                    <li className='mt-2 my-1 mr-1'>3: Only the online customer service obtained in the APP is authentic and credible, do not trust impostors outside the APP.</li>
-                    <li className='mt-2 my-1 mr-1'>4: Fill in the UTR number correctly, the funds will arrive soon.</li>
+                <ol className='text-[#ff0000] text-[13px] flex flex-col gap-1 mt-2'>
+                    <li className='mt-2 my-1 mr-1'>1: Fill in the URT correctly, and the funds will arrive within 1 minute.</li>
+                    <li className='mt-2 my-1 mr-1'>2: The funds have not arrived, please contact the online customer service in time.</li>
+                    <li className='mt-2 my-1 mr-1'>3: Do not keep the old account to recharge, it is easy to cause property loss.</li>
+                    <li className='mt-2 my-1 mr-1'>4: Do not transfer money to strangers, recharge must be done inside the APP.</li>
                 </ol>
 
             </div>

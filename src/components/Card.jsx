@@ -51,7 +51,7 @@ const Card = ({ pre_sale, product_type, product_image, plan_name, plan_type, pla
       )
         :
         (
-          <div className="cursor-pointer btn text-white font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-red-800"
+          <div className="cursor-pointer btn text-white font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-red-700"
             onClick={() => handleClick(product_type, plan_name, plan_type, plan_amount, plan_daily_earning, plan_cycle)}>
             Buy Now
           </div>
