@@ -76,6 +76,8 @@ import product1 from '../images/asml/product1.jpg';
 import product2 from '../images/asml/product2.jpg';
 import product3 from '../images/asml/product3.jpg';
 import product4 from '../images/asml/product4.jpg';
+import jlogo from '../images/asml/jlogo.jpg';
+
 
 
 const customStyles = {
@@ -322,7 +324,7 @@ const Home = () => {
                                 Withdrawal time: 09:00—20:00 <br />
                                 Register to send 100rs
 
-                                <img src={jio} alt="jio" width={240} className='p-2' />
+                                <img src={jlogo} alt="jio" width={240} className='p-2' />
 
                                 <span className="text-red-800">Reliance Jio Infocomm Limited, doing business as Jio, is an Indian 
                                 telecommunications company and a subsidiary of Jio Platforms, 
