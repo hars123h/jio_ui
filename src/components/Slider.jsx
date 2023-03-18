@@ -19,6 +19,9 @@ import slide2 from '../images/asml/slide2.jpg';
 import slide3 from '../images/asml/slide3.jpg';
 import slide4 from '../images/asml/slide4.jpg';
 import slide5 from '../images/asml/slide5.jpg';
+import slide6 from '../images/asml/slide6.jpg';
+import slide7 from '../images/asml/slide7.png';
+import slide8 from '../images/asml/slide8.png';
 
 
 const Slider = () => {
@@ -26,35 +29,49 @@ const Slider = () => {
     <div className='sm:w-3/5 lg:w-3/5 mx-1 py-1'>
       <Carousel showThumbs={false} autoPlay showArrows={true} infiniteLoop>
         <div>
-          <img src={slide1} className="h-[160px]" alt="img_2" />
+          <img src={slide1} className="h-[180px]" alt="img_2" />
         </div>
 
         <div>
-          <img src={slide2} className="h-[160px]" alt="img_2" />
+          <img src={slide6} className="h-[180px]" alt="img_2" />
         </div>
 
         <div>
-          <img src={slide5} className="h-[160px]" alt="img_2" />
+          <img src={slide7} className="h-[180px]" alt="img_2" />
         </div>
+
+        <div>
+          <img src={slide8} className="h-[180px]" alt="img_2" />
+        </div>
+
+
+        <div>
+          <img src={slide2} className="h-[180px]" alt="img_2" />
+        </div>
+
+        <div>
+          <img src={slide5} className="h-[180px]" alt="img_2" />
+        </div>
+
 
         {/* <div>
-          <img src={slide4} className="h-[160px]" alt="img_2" />
+          <img src={slide4} className="h-[180px]" alt="img_2" />
         </div> */}
 
         {/* <div>
-          <img src={lenscart_slide2} className="h-[160px]" alt="img_2" />
+          <img src={lenscart_slide2} className="h-[180px]" alt="img_2" />
         </div>
 
         <div>
-          <img src={lenscart_slide3} className="h-[160px]" alt="img_1" />
+          <img src={lenscart_slide3} className="h-[180px]" alt="img_1" />
         </div>
 
         <div>
-          <img src={lenscart_slide4} className="h-[160px]" alt="img_1" />
+          <img src={lenscart_slide4} className="h-[180px]" alt="img_1" />
         </div>
 
         <div>
-          <img src={lenscart_slide5} className="h-[160px]" alt="img_1" />
+          <img src={lenscart_slide5} className="h-[180px]" alt="img_1" />
         </div> */}
 
       </Carousel>
