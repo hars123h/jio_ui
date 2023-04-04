@@ -250,8 +250,8 @@ const Home = () => {
 
     return (
         <div className='relative bg-red-800 px-1'>
-            {toasterShow  ? <div className='w-[90%] absolute z-50 top-[500px] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 text-center bg-black opacity-[0.98] text-white px-4 py-1 rounded-md'>
+            {toasterShow ? <div className='w-[90%] absolute z-50 top-[500px] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                <div className='flex gap-2 text-center bg-black opacity-100 text-white px-4 py-1 rounded-md'>
                     <div>{toasterText}</div>
                 </div>
             </div> : null}
