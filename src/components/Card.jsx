@@ -7,7 +7,7 @@ import asset9 from '../images/asml/asset 4.jpeg';
 //[#0096D5] [#00bcd4]
 
 
-const Card = ({ pre_sale, product_type, product_image, plan_name, plan_type, plan_amount, plan_daily_earning, plan_cycle, handleClick }) => {
+const Card = ({ pre_sale, long_plan_state, product_type, product_image, plan_name, plan_type, plan_amount, plan_daily_earning, plan_cycle, handleClick }) => {
 
 
   return (
@@ -40,22 +40,40 @@ const Card = ({ pre_sale, product_type, product_image, plan_name, plan_type, pla
 
         {/* {(plan_name==='Walton Plan 6' || plan_name==='Walton Plan 7' || plan_name==='Walton Plan 8' )?<div className="cursor-pointer btn text-white text-center p-2 mt-1 text-lg rounded-md  w-4/5 mx-auto bg-red-400"
             >Click to buy</div>: */}
-
-
       </div>
-      {pre_sale === 1 ? (
-        <div className="cursor-pointer btn text-black font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-pre_sale"
-          >
+
+      {pre_sale === true ? (
+        <div className="cursor-pointer btn text-black font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-pre_sale">
           Pre-Sale
         </div>
-      )
-        :
-        (
-          <div className="cursor-pointer btn text-white font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-red-700"
-            onClick={() => handleClick(product_type, plan_name, plan_type, plan_amount, plan_daily_earning, plan_cycle)}>
-            Buy Now
-          </div>
-        )}
+      ) : null}
+
+      {/* {console.log(pre_sale, product_type, long_plan_state)} */}
+
+      {
+        pre_sale === false ? (
+          product_type === 'long' ? (
+            <div className="cursor-pointer btn text-white font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-red-700"
+              onClick={() => handleClick(product_type, plan_name, plan_type, plan_amount, plan_daily_earning, plan_cycle)}>
+              Buy Now
+            </div>
+          ) : long_plan_state === true ? (
+            <div className="cursor-pointer btn text-white font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-red-700">
+              Buy Now
+            </div>
+          ) : (
+            <div className="cursor-pointer btn text-white font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-red-700"
+              onClick={() => handleClick(product_type, plan_name, plan_type, plan_amount, plan_daily_earning, plan_cycle)}>
+              Buy Now
+            </div>
+          )
+        ) : null
+      }
+
+      {/* <div className="cursor-pointer btn text-white font-semibold text-center  py-2  px-2 mt-5 text-md mb-2 shadow-md  w-[55%] mx-auto bg-red-700"
+        onClick={() => handleClick(product_type, plan_name, plan_type, plan_amount, plan_daily_earning, plan_cycle)}>
+        Buy Now
+      </div> */}
 
     </div>
   )
