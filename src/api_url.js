@@ -1,4 +1,4 @@
-const BASE_URL = "https://urchin-app-xhb2n.ondigitalocean.app/api";
+const BASE_URL = "https://stingray-app-myegm.ondigitalocean.app/api";
 export default BASE_URL;
 
 //
