@@ -82,7 +82,7 @@ const RechargeWindow = () => {
     return (
         <div className='sm:h-[700px] md:h-[950px] flex flex-col   bg-white relative'>
             {toasterShow ? <div className='absolute top-[350px] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 bg-black opacity-90 text-white px-2 py-1 rounded-md'>
+                <div className='flex gap-2 bg-black opacity-[0.98] text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>
                 </div>
             </div> : null}

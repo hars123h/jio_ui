@@ -66,7 +66,7 @@ const Rewards = () => {
     return (
         <div className='md:h-screen  xs:h-[700px] bg-blue-50  h-screen relative'>
             {toasterShow ? <div className='absolute top-1/2 z-30 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-md'>
-                <div className={`flex relative gap-2 ${toasterText.includes('₹')===false?'bg-black opacity-90 text-white px-2 py-1':''} rounded-md`}>
+                <div className={`flex relative gap-2 ${toasterText.includes('₹')===false?'bg-black opacity-[0.98] text-white px-2 py-1':''} rounded-md`}>
                     {toasterText.includes('₹')?(<>
                         <img src={envelope} alt="envelope" width={180} className="rounded-lg pt-5"/>
                         <div className='absolute text-red-500 font-extrabold bg-[#fff2d8] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>{toasterText}</div>

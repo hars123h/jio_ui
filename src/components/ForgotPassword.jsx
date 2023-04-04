@@ -54,7 +54,7 @@ const ForgotPassword = () => {
     return (
         <div className='bg-white h-screen relative'>
             {toasterShow?<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 bg-black opacity-90 text-white px-2 py-1 rounded-md text-center'>
+                <div className='flex gap-2 bg-black opacity-[0.98] text-white px-2 py-1 rounded-md text-center'>
                     <div>{toasterText}</div>
                 </div>
             </div>:null}
