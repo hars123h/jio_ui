@@ -171,7 +171,7 @@ const Home = () => {
 
     useEffect(() => {
         if (localStorage.getItem('pop_up_closed') === null) {
-            setWelcomeShow(true);
+            setWelcomeShow(false);
         }
     }, []);
 
@@ -316,8 +316,7 @@ const Home = () => {
                     isOpen={welcomeShow && false}
                     style={customStyles2}
                     contentLabel="Notice"
-                    ariaHideApp={false}
-                >
+                    ariaHideApp={false}>
                     <div className='w-full rounded-lg shadow-xl z-10 border border-gray-200'>
                         <div className='flex  flex-col bg-white w-full text-white rounded-md'>
                             <div className='flex flex-col p-2 text-sm gap-2 font-normal bg-white text-red-600 text-semibold pt-4 mb-[5px]'>
