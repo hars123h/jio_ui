@@ -298,17 +298,17 @@ const Mine = () => {
 
           <div className="flex flex-col justify-center items-center gap-1 h-full">
             <div>Assets</div>
-            <div className='text-xs'>{balance}</div>
+            <div className='text-xs'>{Math.floor(balance)}</div>
           </div>
 
           <div className="flex flex-col justify-center items-center gap-1  h-full">
             <div>Recharge</div>
-            <div className='text-xs'>{recharge_amount}</div>
+            <div className='text-xs'>{Math.floor(recharge_amount)}</div>
           </div>
 
           <div className="flex flex-col  h-full justify-center items-center gap-1">
             <div>Income</div>
-            <div className='text-xs'>{earning}</div>
+            <div className='text-xs'>{Math.floor(earning)}</div>
           </div>
         </div>
       </div>
