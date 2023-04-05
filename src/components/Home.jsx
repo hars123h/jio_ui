@@ -513,7 +513,7 @@ const Home = () => {
 
                 {currentVisible === 'short' && amountDetails?.plan_state && userDetails && (
                     <div className={`grid grid-cols-1 gap-4`}>
-                        {(userDetails.boughtLong < 1 || amountDetails.plan_state[6] === 0) ?
+                        {(amountDetails.plan_state[6] === 0) ?
                             (
                                 <span className='pointer-events-none'>
                                     {/* <span>hi</span> */}
@@ -525,7 +525,7 @@ const Home = () => {
                             </span>
                         }
 
-                        {(userDetails.boughtLong < 1 || amountDetails.plan_state[7] === 0) ?
+                        {(amountDetails.plan_state[7] === 0) ?
                             (<span className='pointer-events-none'>
                                 <Card pre_sale={amountDetails.plan_state[7]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product3} handleClick={handleClick} plan_name={"Jio 8"} plan_cycle={4} plan_daily_earning={400} plan_amount={1000} plan_type={'Short Plan'} />
                             </span>) :
@@ -534,7 +534,7 @@ const Home = () => {
                             </span>
                             )}
 
-                        {(userDetails.boughtLong < 1 || amountDetails.plan_state[8] === 0) ?
+                        {(amountDetails.plan_state[8] === 0) ?
                             (<span className='pointer-events-none'>
                                 <Card pre_sale={amountDetails.plan_state[8]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product4} handleClick={handleClick} plan_name={"Jio 9"} plan_cycle={4} plan_daily_earning={750} plan_amount={2000} plan_type={'Short Plan'} />
                             </span>) :
@@ -543,7 +543,7 @@ const Home = () => {
                             </span>
                             )}
 
-                        {(userDetails.boughtLong < 1 || amountDetails.plan_state[9] === 0) ?
+                        {(amountDetails.plan_state[9] === 0) ?
                             (<span className='pointer-events-none'>
                                 <Card pre_sale={amountDetails.plan_state[9]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product1} handleClick={handleClick} plan_name={"Jio 10"} plan_cycle={3} plan_daily_earning={1500} plan_amount={3000} plan_type={'Short Plan'} />
                             </span>) :
@@ -552,7 +552,7 @@ const Home = () => {
                             </span>
                             )}
 
-                        {(userDetails.boughtLong < 1 || amountDetails.plan_state[10] === 0) ?
+                        {(amountDetails.plan_state[10] === 0) ?
                             (<span className='pointer-events-none'>
                                 <Card pre_sale={amountDetails.plan_state[10]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product2} handleClick={handleClick} plan_name={"Jio 11"} plan_cycle={3} plan_daily_earning={1800} plan_amount={4200} plan_type={'Short Plan'} />
                             </span>) :
