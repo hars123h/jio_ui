@@ -230,7 +230,7 @@ const Withdrawal = () => {
                     <div className="value"> <input type="number" id="withdrawal_field" onChange={handleWithdrawalAmount} className='w-full text-xl outline-none bg-white py-2' placeholder='Amount' /></div>
                 </div>
                 <div className='flex items-center justify-start gap-4 mt-4 mb-1'>
-                    <div className="balance text-gray-400 font-semibold text-sm">Assets: &#8377; {balance}</div>
+                    <div className="balance text-gray-400 font-semibold text-sm">Assets: &#8377; {Math.floor(balance)}</div>
                     <div onClick={handleWithdrawalAll} className="withdraw font-medium text-red-800 text-sm cursor-pointer">Withdraw all</div>
                 </div>
             </div>
